@@ -1,0 +1,15 @@
+https://www.hackerrank.com/challenges/compare-the-triplets/problem
+
+fun compareTriplets(a: Array<Int>, b: Array<Int>): Array<Int> {
+        var aPoint = 0
+        var bPoint = 0
+        for (i in a.indices){
+            if (a[i] > b[i]){
+                aPoint++
+            }
+            if (a[i] < b[i]){
+                bPoint++
+            }
+        }
+        return arrayOf(aPoint,bPoint)
+}

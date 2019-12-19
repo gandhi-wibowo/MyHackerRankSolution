@@ -1,0 +1,14 @@
+https://www.hackerrank.com/challenges/staircase/problem
+
+fun staircase(n: Int): Unit {
+    var star = ""
+    for (x in 1..n){
+        star += "#"
+
+        var space = ""
+        for (i in 1..(n-x)){
+            space += " "
+        }
+        println(space + star)
+    }
+}

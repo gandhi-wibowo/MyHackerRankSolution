@@ -1,0 +1,7 @@
+https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+
+fun birthdayCakeCandles(ar: Array<Int>): Int {
+        val max = ar.max()
+        val jumlah = ar.count { it == max }
+        return jumlah
+}

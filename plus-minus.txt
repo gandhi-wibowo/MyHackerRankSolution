@@ -1,0 +1,22 @@
+https://www.hackerrank.com/challenges/plus-minus
+
+
+fun plusMinus(arr: Array<Int>): Unit {
+    var positif = 0.toFloat()
+    var negative = 0.toFloat()
+    var zero = 0.toFloat()
+
+    arr.forEach {
+        if (it > 0) positif++
+        if (it < 0) negative++
+        if (it == 0) zero++
+    }
+
+    positif     = (positif / arr.size)
+    negative    = (negative / arr.size)
+    zero        = (zero / arr.size)
+
+    println(positif)
+    println(negative)
+    println(zero)
+}

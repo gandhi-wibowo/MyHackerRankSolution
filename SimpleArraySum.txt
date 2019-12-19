@@ -1,0 +1,9 @@
+https://www.hackerrank.com/challenges/simple-array-sum/problem
+
+fun simpleArraySum(ar: Array<Int>): Int {
+        var sum = 0
+        ar.forEach {
+            sum += it
+        }
+        return sum
+}

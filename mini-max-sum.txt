@@ -1,0 +1,32 @@
+https://www.hackerrank.com/challenges/mini-max-sum/problem
+
+fun miniMaxSum(arr: Array<Int>): Unit {
+
+        val dt : ArrayList<Long> = arrayListOf()
+        arr.forEach {
+            dt.add(it.toLong())
+        }
+
+        var min = 0.toLong()
+        var max = 0.toLong()
+
+        for (i in arr.indices){
+            val data : ArrayList<Long> = dt.clone() as ArrayList<Long>
+            data.removeAt(i)
+
+            if (max == 0.toLong() && min == 0.toLong()){ // jadikan nilai pertama
+                min = data.sum()
+                max = data.sum()
+            }
+
+            if (data.sum() > max){ // kalau hasilnya lebih besar dari max ?
+                max = data.sum()
+            }
+
+            if (data.sum() < min){ // kalau hasilnya lebih kecil dari max ?
+                min = data.sum()
+            }
+        }
+
+        println("$min $max")
+}
